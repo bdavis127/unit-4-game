@@ -42,14 +42,24 @@ $(".crystal").click(function() {
         wins++;
         $(".scores-w").text(wins);
         alert("You win!");
-        
+        $("#number-to-match").empty();
+        randomNumber = getRandomNumber(19,120);
+        $("#number-to-match").html(randomNumber);
+        currentScore = 0;
+        $("#current-score").html(currentScore)
+        newValues();
     }
 
     if (currentScore > randomNumber) {
         losses++;
         $(".scores-l").text(losses);
         alert("You lose!!");
-        
+        $("#number-to-match").empty();
+        randomNumber = getRandomNumber(19,120);
+        $("#number-to-match").html(randomNumber);
+        currentScore = 0;
+        $("#current-score").html(currentScore)
+        newValues();
     }
 
     });
