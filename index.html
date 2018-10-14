@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CrystalsCollector Game</title>
+    <title>Unit 4 Game</title>
+    <!--CSS and Javascript-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 </head>
 <body>
-    
+    <!--Game Title and Instructions-->
+    <h1 class="banner">Crystals Collector</h1>
+    <br>
+    <div class="container">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <br>
+        <p>You win the game by matching your total score to the random number displayed. You lose the game if your total score goes above the random number.</p>
+        <br>
+        <p>The value of each crystal is hidden and can only be determined by verifying how much each crystal is adding to your current score once you click on it.</p>
+        <p>Each time a new game starts, the random number will change and so will the values of the crystal.</p>
+    </div>
+    <br>
+    <div class="randomNumber">
+    <!--Number to match container-->               
+    <div class="col-sm-4 match-box">
+            <p class="number" id="number-to-match">00</p>
+            <p class="side-text">the number<br> to match</p>
+    </div>
+        <br>
+    <!--Score box-->
+    <div class="col-sm-4 score-box">
+        <p class="number" id="current-score">0</p>
+        <p class="side-text">current<br>score</p>
+    </div>
+    <br>
+    <!--Wins Losses-->
+    <div class="col-sm-4 wins-losses">
+        <p class="side-text">wins: </p>
+        <p class="scores-w"></p>
+    </div>
+    <br>
+    <div class="col-sm-4 wins-losses">
+            <p class="side-text">losses: </p>
+            <p class="scores-l"></p>
+        </div>
+    <!--crystals-->
+    <div class="row">
+        <div class="col-md-3"><img class="crystal" id="crystal1" src="assets/images/crystal4.jpg"/></div>
+        <div class="col-md-3"><img class="crystal" id="crystal2" src="assets/images/crystal4.jpg"/></div>
+        <div class="col-md-3"><img class="crystal" id="crystal3" src="assets/images/crystal4.jpg"/></div>
+        <div class="col-md-3"><img class="crystal" id="crystal4" src="assets/images/crystal4.jpg"/></div>    
+    </div>
+            
+
+    <!-- Call jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Call game.js -->
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
